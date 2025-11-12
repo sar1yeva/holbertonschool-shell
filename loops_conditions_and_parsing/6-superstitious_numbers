@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#6-superstitious_numbers
+for count in {1..20}; do
+  echo "$count"
+  if [ "$count" -eq 4];then 
+      echo "bad luck from China"
+  fi 
+  if [ "$count" -eq 10];then
+       echo "bad luck from Japan"
+  fi
+  if [ "$count" -eq 17];then
+       echo "bad luck from Italy"
+  fi
+done
