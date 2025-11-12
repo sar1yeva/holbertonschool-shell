@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#for_ls
+for entry in `ls $search_dir`; do
+    echo $entry
+done
