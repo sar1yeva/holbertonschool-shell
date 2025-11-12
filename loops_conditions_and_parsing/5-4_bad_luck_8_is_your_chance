@@ -3,7 +3,7 @@
 count=1
 while [ "$count" -le 10 ]; do
   if [ "$count" -eq 4 ]; then
-  if [ "$count" -eq 8 ]; then
+  elif [ "$count" -eq 8 ]; then
     echo "Best School"
     echo "bad luck"
     echo "good luck"
