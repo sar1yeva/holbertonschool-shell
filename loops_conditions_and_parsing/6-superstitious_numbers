@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
-#6-superstitious_numbers
-for count in {1..20}; do
+#superstitious_numbers
+count=1
+end=20
+
+while [ "$count" -le "$end" ]; do
   echo "$count"
-  if [ "$count" -eq 4];then 
+
+  case "$count" in
+    4)
       echo "bad luck from China"
-  fi 
-  if [ "$count" -eq 10];then
-       echo "bad luck from Japan"
-  fi
-  if [ "$count" -eq 17];then
-       echo "bad luck from Italy"
-  fi
+      ;;
+    9)
+      echo "bad luck from Japan"
+      ;;
+    17)
+      echo "bad luck from Italy"
+      ;;
+  esac
+  count=$((count + 1))
 done
+
