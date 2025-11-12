@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 # Display filenames after first dash
-
-# Iterate over non-hidden files in current directory
 for file in *; do
-  # Check if it is a regular file or directory
   if [ -e "$file" ]; then
-    # Extract part after first dash, if any
-    if [[ "$file" == *-* ]]; then
+  if [[ "$file" == *-* ]]; then
       echo "${file#*-}"
     else
       echo "$file"
