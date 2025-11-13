@@ -2,7 +2,7 @@
 # read /etc/passwd and show username, user id and home directory
 
 while IFS=: read -r user password uid gid comment home shell; do
-  echo "The user $user is part of the $password gang, 
+  echo "The user $user is part of the $gid gang, 
  lives in $home and rides $shell. 
  $uid's place is protected by the passcode $password,
  more info about the user here: $comment "
