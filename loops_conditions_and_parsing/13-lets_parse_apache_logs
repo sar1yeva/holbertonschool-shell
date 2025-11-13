@@ -1,0 +1,3 @@
+#!/bin/bash
+#lets_parse_apache_logs
+cat access_log.txt | awk '{print $1}'| uniq -c |sort -n -k 1| tail
