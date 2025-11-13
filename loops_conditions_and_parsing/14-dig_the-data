@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#dig_the-data
+cat access.* | awk '{ print $1 }' | sort | uniq -c | sort -nr
