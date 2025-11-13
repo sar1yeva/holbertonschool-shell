@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #to_file_or_not_to_file
 FILE="school"
 
