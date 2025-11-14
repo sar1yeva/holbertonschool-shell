@@ -3,5 +3,4 @@
 while true; do
   sleep 2
   echo "To infinity and beyond"
-  rm -f test.tmp
 done
