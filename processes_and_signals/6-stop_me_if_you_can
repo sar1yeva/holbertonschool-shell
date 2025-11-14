@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 #stop_me_if_you_can
-pkill -f 4-to_infinity_and_beyond
+for pid in $(ps -ef | grep '[4]-to_infinity_and_beyond' | awk '{print $2}'); do
+    kill $pid
+done
