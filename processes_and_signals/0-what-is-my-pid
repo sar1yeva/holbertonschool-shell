@@ -1,3 +1,0 @@
-#!/usr/bin/env
-#what-is-my-pid
-echo  $$ 
