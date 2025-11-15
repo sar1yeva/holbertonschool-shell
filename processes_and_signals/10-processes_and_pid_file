@@ -1,11 +1,21 @@
-#!/usr/bin/env bash
-#process_and_pid_file
-PID_FILE="/tmp/myscript.pid"
-echo $$ > "$PID_FILE"
-trap 'echo "I hate the kill command"; rm -f "$PID_FILE"; exit 0' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'rm -f "$PID_FILE"; exit 0' SIGQUIT
+#!/bin/bash
+cleanup() {
+    rm -f /var/run/myscript.pid
+    exit 0
+}
+sigint_handler() {
+    echo "Y U no love me?!"
+}
+sigterm_handler() {
+    echo "I hate the kill command"
+    cleanup
+}
+echo $$ > /var/run/myscript.pid
+trap sigint_handler SIGINT
+trap sigterm_handler SIGTERM
+trap cleanup SIGQUIT
 while true; do
     echo "To infinity and beyond"
-    sleep 2
+    sleep 1
 done
+
